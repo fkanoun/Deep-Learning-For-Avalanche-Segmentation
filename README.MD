@@ -31,11 +31,11 @@ The files must satisfy the following structure:
 |  |-- valid_annotated
 
 ```
-**Note:** The folders of your dataset must satisfy the above structure. All images and masks should have size (480,320).
+**Note:** The folders of your data folder must satisfy the above structure. All images and masks should have size (480,320).
 
 ***
 ## Training
-The project contains complete codes for training and predicting. Possibility to train two different models, efficiennet or a lighter model mobilenet.
+The project contains complete codes for training and predicting. Possibility to train two different models, efficientnet or a lighter model mobilenet.
 And you can perform a simple command as this to build a model on your dataset:
 ```buildoutcfg
 python train.py --backbone mobilenetv2 --dataset DATASET_PATH 
@@ -63,7 +63,7 @@ optional arguments:
 
 ```
 
-**Note:** If you don't give the parameter BACKBONE, the default backbone will be used.
+**Note:** If you don't give the parameter BACKBONE, the default backbone will be used. High resources are needed to train efficientnetb5. 
 
 ***
 ## Predicting
@@ -85,7 +85,7 @@ optional arguments:
 ``` 
 **Note:** If no image is provided, the inference will be computed on the test.jpg image. Only the pretrained mobilenet backbone is available. If you want to test the efficientnetb5 model, please download it from this link (https://gofile.io/?c=825n0S) and place it in the main folder as specified above.
 
-## Segmentation results
+## Results
 
 Original            |  GT   |  Result
 :-------------------------:|:-------------------------:|:-------------------------:
