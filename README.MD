@@ -10,7 +10,7 @@
 - Tensorflow `pip install tensorflow==1.3.0` 
 - Keras `pip install keras==2.2.4`
 
-**Note:** The recommended version of tensorflow is 1.3 and 2.2.4 for keras***
+**Note:** The working versions are 1.3 for tensorflow and 2.2.4 for keras
 
 ***
 ## Files Setting
@@ -31,10 +31,10 @@ The files must satisfy the following structure:
 |  |-- valid_annotated
 
 ```
-**Note:** The folders of your dataset must satisfy the above structure. Images should also have size (480,320)***
+**Note:** The folders of your dataset must satisfy the above structure. All images and masks should have size (480,320).
 
 ***
-### Training
+## Training
 The project contains complete codes for training and predicting. Possibility to train two different models, efficiennet or a lighter model mobilenet.
 And you can perform a simple command as this to build a model on your dataset:
 ```buildoutcfg
@@ -63,13 +63,13 @@ optional arguments:
 
 ```
 
-**Note:** If you don't give the parameter "backbone", the default backbone will be used.
+**Note:** If you don't give the parameter BACKBONE, the default backbone will be used.
 
 ***
-### Predicting
-You can get the prediction of a single RGB image using the pretrained models or your own trained models from above:
+## Predicting
+You can get the avalanche segmentation from a mountain image using the pretrained models or your own trained models from above:
 ```buildoutcfg
-python predict.py --backbone efficientnetb5 --pretrained True --timer true --image_path IMAGE_PATH
+python predict.py --backbone efficientnetb5 --pretrained true --timer false --image_path IMAGE_PATH
 ```
 ```buildoutcfg
 optional arguments:
@@ -83,4 +83,10 @@ optional arguments:
   
 
 ``` 
-**Note:** If no image is provided, the inference will be computed on the test.jpg image. Only the pretrained mobilenet backbone is available. If you want to test the efficientnetb5 model, please download it from this link and place it in the main folder as speficied above.
+**Note:** If no image is provided, the inference will be computed on the test.jpg image. Only the pretrained mobilenet backbone is available. If you want to test the efficientnetb5 model, please download it from this link (https://gofile.io/?c=825n0S) and place it in the main folder as specified above.
+
+## Segmentation results
+
+Original            |  GT   |  Result
+:-------------------------:|:-------------------------:|:-------------------------:
+![alt-text-3](https://github.com/GeorgeSeif/FC-DenseNet-Tiramisu/blob/master/Images/0001TP_008550.png "Original")  |  ![alt-text-4](https://github.com/GeorgeSeif/FC-DenseNet-Tiramisu/blob/master/Images/0001TP_008550_gt.png "GT")  |   ![alt-text-5](https://github.com/GeorgeSeif/FC-DenseNet-Tiramisu/blob/master/Images/0001TP_008550_pred.png "Result")
