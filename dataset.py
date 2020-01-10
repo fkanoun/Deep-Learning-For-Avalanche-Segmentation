@@ -11,10 +11,8 @@ class Dataset:
         images_dir (str): path to images folder
         masks_dir (str): path to segmentation masks folder
         class_values (list): values of classes to extract from segmentation mask
-        augmentation (albumentations.Compose): data transfromation pipeline 
-            (e.g. flip, scale, etc.)
-        preprocessing (albumentations.Compose): data preprocessing 
-            (e.g. normalization, shape manipulation, etc.)
+        augmentation : data transfromation pipeline 
+        preprocessing : data preprocessing 
     
     """
     
