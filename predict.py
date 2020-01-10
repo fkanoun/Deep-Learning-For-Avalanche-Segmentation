@@ -48,6 +48,10 @@ if(args.pretrained==True):
 	model_path = model_path+'_pretrained' 
 
 model_path = model_path+'.h5'
+
+if not (os.path.exists(model_path)):
+	raise ValueError('The pretrained backbone \'{backbone}\' is not in the main folder. Please use mobilenetv2 as backbone or download the pretrained model for efficientnetb5'.format(backbone=args.backbone))
+
 model.load_weights(model_path)
 
 if(args.timer==True):

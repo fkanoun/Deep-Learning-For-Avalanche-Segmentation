@@ -10,7 +10,7 @@
 - Tensorflow `pip install tensorflow==1.3.0` 
 - Keras `pip install keras==2.2.4`
 
-**Note:** The working versions are 1.3 for tensorflow and 2.2.4 for keras
+**Note:** The working versions for this project are 1.3 for tensorflow and 2.2.4 for keras
 
 ***
 ## Files Setting
@@ -31,11 +31,11 @@ The files must satisfy the following structure:
 |  |-- valid_annotated
 
 ```
-**Note:** The folders of your data folder must satisfy the above structure. All images and masks should have size (480,320).
+**Note:** The folders of your data folder must satisfy the above structure. All images and masks should have (480,320) sizes.
 
 ***
 ## Training
-The project contains complete codes for training and predicting. Possibility to train two different models, efficientnet or a lighter model mobilenet.
+This project contains complete codes for training and predicting. Possibility to train two different models, efficientnet or a lighter model mobilenet.
 And you can perform a simple command as this to build a model on your dataset:
 ```buildoutcfg
 python train.py --backbone mobilenetv2 --dataset DATASET_PATH 
@@ -63,7 +63,7 @@ optional arguments:
 
 ```
 
-**Note:** If you don't give the parameter BACKBONE, the default backbone will be used. High resources are needed to train efficientnetb5. 
+**Note:** If you don't give the parameter BACKBONE, the default backbone will be used. High computational resources are needed in order to train with efficientnetb5 backbone. 
 
 ***
 ## Predicting
@@ -83,7 +83,7 @@ optional arguments:
   
 
 ``` 
-**Note:** If no image is provided, the inference will be computed on the test.jpg image. Only the pretrained mobilenet backbone is available. If you want to test the efficientnetb5 model, please download it from this link (https://gofile.io/?c=825n0S) and place it in the main folder as specified above.
+**Note:** If no image is provided, the inference will be computed on the test.jpg image. Only the pretrained mobilenet backbone is available. If you want to test the efficientnetb5 model, please download it from this link (https://gofile.io/?c=825n0S) and place it in the main folder as specified in the files setting.
 
 ## Results
 
